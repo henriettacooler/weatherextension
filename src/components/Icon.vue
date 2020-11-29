@@ -15,23 +15,17 @@ export default {
           var icon = this.weatherIcon.icon
           if (icon === "01d") return "☀️"
           else return "🌙"
-          break
         case "clouds":
           return "☁️"
-          break
         case "snow":
           return "❄️"
-          break
         case "rain":
         case "drizzle":
           return "☔️"
-          break
         case "thunderstorm":
           return "⛈"
-          break
         default:
           return "💨"
-          break
       }
     },
   },
