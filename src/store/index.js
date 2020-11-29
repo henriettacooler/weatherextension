@@ -26,7 +26,7 @@ export default new Vuex.Store({
         message: message 
       }
     },
-    toggleFarenheit(state, showFarenheit){
+    toggleFarenheit(){
       this.state.showFarenheit = !this.state.showFarenheit
     }
   },
