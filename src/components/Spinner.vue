@@ -12,7 +12,7 @@ export default {
 
 <style scoped>
 div {
-  margin: auto;
+  margin: 20px auto;
 }
 .spinner {
   border: 6px solid #f7f2e7;
