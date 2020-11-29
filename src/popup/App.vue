@@ -2,6 +2,12 @@
   <div id="app">
     <Header />
     <Search v-on:search-city="fetchWeatherData" />
+    <span
+      v-if="result.type === 'initial'"
+      class="icon icon-initial"
+      role="img"
+      aria-label="crying emoji"
+    >☔️☀️</span>
     <WeatherDetails v-if="result.type === 'completed'" v-bind:result="result.data" />
     <ErrorDetails v-if="result.type === 'error'" v-bind:result="result" />
     <Spinner v-if="result.type ==='loading'" />
@@ -57,14 +63,14 @@ export default {
 </script>
 
 <style>
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@800&family=Raleway&display=swap");
 
 html {
   width: 400px;
   height: 400px;
+  background-color: #f7f2e7;
 }
 #app {
-  font-family: "Raleway", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -74,11 +80,16 @@ h1,
 h2 {
   font-weight: normal;
   font-family: "Poppins", sans-serif;
+  color: #199d7c;
 }
-img {
-  height: 200px;
+p {
+  font-family: "Raleway", sans-serif;
+  color: #199d7c;
 }
 .icon {
-  font-size: 120px;
+  font-size: 100px;
+}
+.icon-initial {
+  line-height: 2;
 }
 </style>

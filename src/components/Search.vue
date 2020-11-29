@@ -1,7 +1,7 @@
 <template>
   <form @submit="submitQuery">
-    <input type="text" v-model="city" :disabled="loading" name="city" placeholder="city..." />
-    <input type="submit" value="Submit" :disabled="loading" class="btn" />
+    <input type="text" v-model="city" :disabled="loading" name="city" placeholder=" 🔍 Search... " />
+    <input type="submit" value="Search" :disabled="loading" class="btn" />
   </form>
 </template>
 
@@ -28,4 +28,27 @@ export default {
 </script>
 
 <style scoped>
+input[type="submit"] {
+  background-color: #ffa400;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  padding: 8px 16px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+input[type="text"] {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 10px;
+  background: #ffa400;
+  color: #fff;
+}
+input:focus {
+  outline: none;
+}
+::placeholder {
+  color: #fff;
+}
 </style>

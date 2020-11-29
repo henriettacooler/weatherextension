@@ -3,8 +3,8 @@
     <label class="switch" title="°C/°F">
       <input type="checkbox" @click="toggleFarenheit" />
       <span class="slider round"></span>
+      <p style="margin: 0">°C/°F</p>
     </label>
-    <p style="margin: 0">°C/°F</p>
   </div>
 </template>
 
@@ -26,6 +26,7 @@ export default {
   display: inline-block;
   width: 30px;
   height: 16px;
+  opacity: 50%;
 }
 
 .switch input {
@@ -41,7 +42,7 @@ export default {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #2196f3;
+  background-color: #ffa400;
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }

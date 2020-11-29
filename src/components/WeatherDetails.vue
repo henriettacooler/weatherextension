@@ -1,7 +1,15 @@
 <template>
   <div>
-    <p v-show="!showInFarenheit">It feels like {{tempInCelsius}}°C outside.</p>
-    <p v-show="showInFarenheit">It feels like {{tempInFahrenheit}}°F outside.</p>
+    <div>
+      <p v-show="!showInFarenheit">
+        It feels like
+        <span class="temp-text">{{tempInCelsius}}°C</span> outside.
+      </p>
+      <p v-show="showInFarenheit">
+        It feels like
+        <span class="temp-text">{{tempInFahrenheit}}°F</span> outside.
+      </p>
+    </div>
     <ToggleSwitch />
     <Icon v-bind:weatherIcon="result.weather[0]" />
   </div>
@@ -32,4 +40,7 @@ export default {
 </script>
 
 <style scoped>
+.temp-text {
+  font-size: 42px;
+}
 </style>

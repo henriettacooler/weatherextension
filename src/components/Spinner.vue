@@ -11,10 +11,13 @@ export default {
 </script>
 
 <style scoped>
+div {
+  margin: auto;
+}
 .spinner {
-  border: 6px solid #fff;
-  border-top: 6px solid pink;
-  border-bottom: 6px solid pink;
+  border: 6px solid #f7f2e7;
+  border-top: 6px solid #199d7c;
+  border-bottom: 6px solid #199d7c;
   border-radius: 50%;
   width: 40px;
   height: 40px;

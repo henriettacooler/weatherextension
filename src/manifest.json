@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "How's the Weather?",
   "homepage_url": "http://localhost:8080/",
-  "description": "It's so much more important to know what temperature it actually feels like, don't you think?",
+  "description": "It's makes much more sense to know what temperature it actually feels like, don't you think?",
   "default_locale": "en",
   "permissions": [
     "<all_urls>",
