@@ -76,10 +76,10 @@ html {
   text-align: center;
   margin-top: 60px;
 }
-h1,
-h2 {
+h1 {
   font-weight: normal;
   font-family: "Poppins", sans-serif;
+  font-size: 28px;
   color: #199d7c;
 }
 p {

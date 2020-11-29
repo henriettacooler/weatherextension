@@ -28,7 +28,7 @@ export default {
 </script>
 
 <style scoped>
-input[type="submit"] {
+.btn {
   background-color: #ffa400;
   border: none;
   border-radius: 10px;

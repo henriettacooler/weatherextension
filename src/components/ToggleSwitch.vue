@@ -16,7 +16,6 @@ export default {
       this.$store.commit("toggleFarenheit")
     },
   },
-  computed: {},
 }
 </script>
 
