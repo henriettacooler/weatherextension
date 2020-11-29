@@ -41,7 +41,7 @@ export default {
           if (json.cod === 200) {
             this.$store.commit("setCompleted", json)
           } else {
-            //dont want to set type to completed if city is not found
+            //want to set type to error if city is not found
             this.$store.commit("setError", json.message)
           }
         })

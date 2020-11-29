@@ -2,6 +2,7 @@
   <form class @submit="submitQuery">
     <input type="text" v-model="city" name="city" placeholder="city..." />
     <input type="submit" value="Submit" class="btn" />
+    <p>{{this.$store.state.result}}</p>
   </form>
 </template>
 
