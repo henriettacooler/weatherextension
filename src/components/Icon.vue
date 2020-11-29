@@ -1,6 +1,5 @@
 <template>
   <div>
-    <h1>{{weatherIconn}}</h1>
     <span class="icon" role="img" v-bind:aria-label="weatherIcon.main">{{selectedWeatherIcon}}</span>
   </div>
 </template>

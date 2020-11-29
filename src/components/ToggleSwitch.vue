@@ -1,9 +1,10 @@
 <template>
   <div>
-    <label class="switch">
-      <input type="checkbox" v-bind:checked="showInFarenheit" @click="toggleFarenheit" />
+    <label class="switch" title="°C/°F">
+      <input type="checkbox" @click="toggleFarenheit" />
       <span class="slider round"></span>
     </label>
+    <p style="margin: 0">°C/°F</p>
   </div>
 </template>
 
@@ -40,7 +41,7 @@ export default {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  background-color: #2196f3;
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
@@ -55,14 +56,6 @@ export default {
   background-color: white;
   -webkit-transition: 0.2s;
   transition: 0.2s;
-}
-
-input:checked + .slider {
-  background-color: #2196f3;
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px #2196f3;
 }
 
 input:checked + .slider:before {

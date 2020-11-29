@@ -1,8 +1,7 @@
 <template>
-  <form class @submit="submitQuery">
-    <input type="text" v-model="city" name="city" placeholder="city..." />
-    <input type="submit" value="Submit" class="btn" />
-    <p>{{this.$store.state.result}}</p>
+  <form @submit="submitQuery">
+    <input type="text" v-model="city" :disabled="loading" name="city" placeholder="city..." />
+    <input type="submit" value="Submit" :disabled="loading" class="btn" />
   </form>
 </template>
 
@@ -18,7 +17,11 @@ export default {
     submitQuery(event) {
       event.preventDefault()
       this.$emit("search-city", this.city)
-      //this.city = '';
+    },
+  },
+  computed: {
+    loading: function () {
+      return this.$store.state.result.type === "loading"
     },
   },
 }
