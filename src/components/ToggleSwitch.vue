@@ -1,10 +1,10 @@
 <template>
   <div>
-    <label class="switch" title="°C/°F">
+    <label class="switch">
       <input type="checkbox" @click="toggleFarenheit" />
-      <span class="slider round"></span>
-      <p style="margin: 0">°C/°F</p>
+      <span class="slider"></span>
     </label>
+    <p style="margin: 0">°C/°F</p>
   </div>
 </template>
 
@@ -20,20 +20,22 @@ export default {
 </script>
 
 <style scoped>
+/* The switch - the box around the slider */
 .switch {
   position: relative;
   display: inline-block;
   width: 30px;
   height: 16px;
-  opacity: 50%;
 }
 
+/* Hide default HTML checkbox */
 .switch input {
   opacity: 0;
   width: 0;
   height: 0;
 }
 
+/* The slider */
 .slider {
   position: absolute;
   cursor: pointer;
@@ -44,6 +46,7 @@ export default {
   background-color: #ffa400;
   -webkit-transition: 0.2s;
   transition: 0.2s;
+  border-radius: 16px;
 }
 
 .slider:before {
@@ -56,20 +59,16 @@ export default {
   background-color: white;
   -webkit-transition: 0.2s;
   transition: 0.2s;
+  border-radius: 50%;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #ffa400;
 }
 
 input:checked + .slider:before {
   -webkit-transform: translateX(13px);
   -ms-transform: translateX(13px);
   transform: translateX(13px);
-}
-
-/* Rounded sliders */
-.slider.round {
-  border-radius: 16px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
 }
 </style>
